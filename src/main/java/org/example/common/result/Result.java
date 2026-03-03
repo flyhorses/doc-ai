@@ -1,15 +1,14 @@
 package org.example.common.result;
 
-import dev.langchain4j.agent.tool.P;
 import lombok.Data;
 
 @Data
 public class Result<T> {
-    private  Integer code;
+    private Integer code;
     private String msg;
     private T data;
 
-    public static <T> Result<T> success(T data){
+    public static <T> Result<T> success(T data) {
         Result<T> result = new Result<>();
         result.setCode(200);
         result.setMsg("操作成功");
@@ -17,15 +16,14 @@ public class Result<T> {
         return result;
     }
 
-    public static <T> Result<T> success(){
+    public static <T> Result<T> success() {
         return success(null);
     }
 
-    public static <T> Result<T> error(String msg){
+    public static <T> Result<T> error(String msg) {
         Result<T> result = new Result<>();
         result.setCode(500);
         result.setMsg(msg);
         return result;
     }
-
 }
