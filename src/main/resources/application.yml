@@ -10,7 +10,7 @@ spring:
       database: 0
 langchain4j:
   zhipu-ai:
-    api-key: 09c1ade6a0204b6991d3c73a56cf6afd.T8gKnTtToZFkHWwG
+    api-key: 
     chat-model:
       model-name: glm-4.5-air
     embedding-model:
